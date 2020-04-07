@@ -1,0 +1,31 @@
+/usr/local/bin/python3.6 /Users/Yan/Desktop/hw3/test/unit_test_catalog_3.py
+
+*********** Testing to JSON. *******************
+
+Teams definition = 
+ {
+  "table_name": "teams",
+  "file_name": "/Users/Yan/Desktop/hw3/data/Teams.csv",
+  "columns": [
+    {
+      "column_name": "teamID",
+      "column_type": "text",
+      "not_null": true
+    },
+    {
+      "column_name": "yearID",
+      "column_type": "text",
+      "not_null": true
+    },
+    {
+      "column_name": "W",
+      "column_type": "number",
+      "not_null": false
+    }
+  ]
+}
+
+
+
+
+Process finished with exit code 0

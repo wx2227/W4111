@@ -1,0 +1,216 @@
+/usr/local/bin/python3.6 /Users/Yan/Desktop/hw3/test/unit_test_csv_table_2.py
+/Users/Yan/Desktop/hw3/test
+
+
+********************    Starting test_optimizable_1, optimize = False    ********************
+
+
+
+
+Dude. This takes 30 minutes. Trust me.
+
+
+
+
+********************    Starting test_optimizable_2, optimize = True    ********************
+
+
+People table metadata = 
+ {
+  "table_name": "people",
+  "file_name": "/Users/Yan/Desktop/hw3/data/People.csv",
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": true
+    },
+    {
+      "column_name": "nameLast",
+      "column_type": "text",
+      "not_null": true
+    },
+    {
+      "column_name": "nameFirst",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "throws",
+      "column_type": "text",
+      "not_null": false
+    }
+  ]
+}
+Batting table metadata = 
+ {
+  "table_name": "batting",
+  "file_name": "/Users/Yan/Desktop/hw3/data/Batting.csv",
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": true
+    },
+    {
+      "column_name": "H",
+      "column_type": "number",
+      "not_null": true
+    },
+    {
+      "column_name": "AB",
+      "column_type": "number",
+      "not_null": false
+    },
+    {
+      "column_name": "teamID",
+      "column_type": "text",
+      "not_null": true
+    },
+    {
+      "column_name": "yearID",
+      "column_type": "text",
+      "not_null": true
+    },
+    {
+      "column_name": "stint",
+      "column_type": "number",
+      "not_null": true
+    }
+  ]
+}
+Loaded people table = 
+ people
+Loaded batting table = 
+ batting
+Swapping scan and probe tables.
+Before pushdown, scan table size is =  104324
+Attempting to pushdown WHERE template =  null
+After pushdown, scan table size is =  104324
+Result = 
+ JOIN(people,batting)
+
+
+Elapsed time =  0.02902078628540039
+
+
+********************    Complete test_join_optimizable_2    ********************
+
+
+
+
+********************    Starting test_optimizable_3, optimize = True    ********************
+
+
+People table metadata = 
+ {
+  "table_name": "people",
+  "file_name": "/Users/Yan/Desktop/hw3/data/People.csv",
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": true
+    },
+    {
+      "column_name": "nameLast",
+      "column_type": "text",
+      "not_null": true
+    },
+    {
+      "column_name": "nameFirst",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCity",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "birthCountry",
+      "column_type": "text",
+      "not_null": false
+    },
+    {
+      "column_name": "throws",
+      "column_type": "text",
+      "not_null": false
+    }
+  ],
+  "indexes": [
+    {
+      "index_name": "pid_idx",
+      "type": "INDEX",
+      "columns": [
+        "playerID"
+      ]
+    }
+  ]
+}
+Batting table metadata = 
+ {
+  "table_name": "batting",
+  "file_name": "/Users/Yan/Desktop/hw3/data/Batting.csv",
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": true
+    },
+    {
+      "column_name": "H",
+      "column_type": "number",
+      "not_null": true
+    },
+    {
+      "column_name": "AB",
+      "column_type": "number",
+      "not_null": false
+    },
+    {
+      "column_name": "teamID",
+      "column_type": "text",
+      "not_null": true
+    },
+    {
+      "column_name": "yearID",
+      "column_type": "text",
+      "not_null": true
+    },
+    {
+      "column_name": "stint",
+      "column_type": "number",
+      "not_null": true
+    }
+  ]
+}
+Loaded people table = 
+ people
+Loaded batting table = 
+ batting
+Before pushdown, scan table size is =  19370
+Attempting to pushdown WHERE template =  {"playerID": "willite01"}
+After pushdown, scan table size is =  1
+Result = 
+ JOIN(people,batting)
+
+
+Elapsed time =  0.00021982192993164062
+
+
+********************    Complete test_join_optimizable_3    ********************
+
+
+
+Process finished with exit code 0

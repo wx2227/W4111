@@ -1,0 +1,219 @@
+/usr/local/bin/python3.6 /Users/Yan/Desktop/hw3/test/unit_test_catalog_2.py
+/Users/Yan/Desktop/hw3/test
+
+
+********************    Starting test_create_table_4_fail    ********************
+
+
+Exception e =  No column definition for primary key.
+
+
+********************    SUCCESS test_create_table_4_fail should fail.    ********************
+
+
+
+
+********************    Starting test_create_table_5_prep    ********************
+
+
+Batting table {
+  "table_name": "batting",
+  "file_name": "/Users/Yan/Desktop/hw3/data/Batting.csv",
+  "columns": [
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": true
+    },
+    {
+      "column_name": "teamID",
+      "column_type": "text",
+      "not_null": true
+    },
+    {
+      "column_name": "yearID",
+      "column_type": "text",
+      "not_null": true
+    },
+    {
+      "column_name": "stint",
+      "column_type": "number",
+      "not_null": true
+    },
+    {
+      "column_name": "H",
+      "column_type": "number",
+      "not_null": false
+    },
+    {
+      "column_name": "AB",
+      "column_type": "number",
+      "not_null": false
+    }
+  ],
+  "indexes": [
+    {
+      "index_name": "primary_key",
+      "type": "PRIMARY",
+      "columns": [
+        "playerID",
+        "teamID",
+        "yearID",
+        "stint"
+      ]
+    }
+  ]
+}
+
+
+********************    Completed test_create_table_5_prep    ********************
+
+
+
+
+********************    Starting test_create_table_5    ********************
+
+
+Initial status of table = 
+ {
+  "table_name": "batting",
+  "file_name": "/Users/Yan/Desktop/hw3/data/Batting.csv",
+  "columns": [
+    {
+      "column_name": "AB",
+      "column_type": "number",
+      "not_null": false
+    },
+    {
+      "column_name": "H",
+      "column_type": "number",
+      "not_null": false
+    },
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": true
+    },
+    {
+      "column_name": "stint",
+      "column_type": "number",
+      "not_null": true
+    },
+    {
+      "column_name": "teamID",
+      "column_type": "text",
+      "not_null": true
+    },
+    {
+      "column_name": "yearID",
+      "column_type": "text",
+      "not_null": true
+    }
+  ],
+  "indexes": [
+    {
+      "index_name": "primary_key",
+      "type": "PRIMARY",
+      "columns": "playerID"
+    },
+    {
+      "index_name": "primary_key",
+      "type": "PRIMARY",
+      "columns": "teamID"
+    },
+    {
+      "index_name": "primary_key",
+      "type": "PRIMARY",
+      "columns": "yearID"
+    },
+    {
+      "index_name": "primary_key",
+      "type": "PRIMARY",
+      "columns": "stint"
+    }
+  ]
+}
+Modified status of table = 
+ {
+  "table_name": "batting",
+  "file_name": "/Users/Yan/Desktop/hw3/data/Batting.csv",
+  "columns": [
+    {
+      "column_name": "AB",
+      "column_type": "number",
+      "not_null": false
+    },
+    {
+      "column_name": "H",
+      "column_type": "number",
+      "not_null": false
+    },
+    {
+      "column_name": "playerID",
+      "column_type": "text",
+      "not_null": true
+    },
+    {
+      "column_name": "stint",
+      "column_type": "number",
+      "not_null": true
+    },
+    {
+      "column_name": "teamID",
+      "column_type": "text",
+      "not_null": true
+    },
+    {
+      "column_name": "yearID",
+      "column_type": "text",
+      "not_null": true
+    },
+    {
+      "column_name": "HR",
+      "column_type": "number",
+      "not_null": false
+    },
+    {
+      "column_name": "G",
+      "column_type": "number",
+      "not_null": false
+    }
+  ],
+  "indexes": [
+    {
+      "index_name": "primary_key",
+      "type": "PRIMARY",
+      "columns": "playerID"
+    },
+    {
+      "index_name": "primary_key",
+      "type": "PRIMARY",
+      "columns": "teamID"
+    },
+    {
+      "index_name": "primary_key",
+      "type": "PRIMARY",
+      "columns": "yearID"
+    },
+    {
+      "index_name": "primary_key",
+      "type": "PRIMARY",
+      "columns": "stint"
+    },
+    {
+      "index_name": "team_year_idx",
+      "type": "INDEX",
+      "columns": [
+        "teamID",
+        "yearID"
+      ]
+    }
+  ]
+}
+
+
+********************    Success test_create_table_5    ********************
+
+
+
+Process finished with exit code 0
